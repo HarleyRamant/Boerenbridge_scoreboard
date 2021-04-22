@@ -3,6 +3,8 @@ const setBtn = document.querySelector('#setbtn');
 const playBtn = document.querySelector('#playbtn');
 const nextBtn = document.querySelector('#nextbtn');
 
+const playerNameInputs = document.querySelectorAll('.playerName');
+
 
 let setBtnActive = true;
 let playBtnActive = false;
@@ -33,14 +35,20 @@ nextBtn.addEventListener('click', ()=>{
 
 //Get player names
 let players = [];
+
+
+//Temporary
+/*
 players.push(new Player('Harley'));
 players.push(new Player('Tim'));
-players.push(new Player('Willy'));
-players.push(new Player('Michel'));
-players.push(new Player('Timmy'));
 players.push(new Player('Kevin'));
-
+players.push(new Player('Michel'));
+players.push(new Player('Willy'));
 loadPlayers();
+*/
+//
+
+
 //Load players onto view
 function loadPlayers(){
     gameTable.innerHTML = "";
@@ -48,7 +56,15 @@ function loadPlayers(){
         gameTable.appendChild(player.getPlayer());
     });
 }
-
+function getPlayerNames(){
+    playerNameInputs.forEach(playerName => {
+        console.log(`player 1 is called "${playerName.value}"`);
+        if(playerName.value != ""){
+            players.push(new Player(playerName.value));
+        }
+    })
+    loadPlayers();
+}
 
 
 //Make players predict score, disable play button

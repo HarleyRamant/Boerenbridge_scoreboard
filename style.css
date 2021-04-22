@@ -5,9 +5,31 @@
 body {
     height: 100vh;
     width: 100wv;
+    margin: 0;
 }
 .hidden {
-    display: none;
+    display: none !important;
+}
+.view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+#game{
+    display: flex;
+    flex-direction: column;
+}
+#newGameBtn {
+    text-decoration: underline;
+    transition: color 0.2s linear;
+}
+#newGameBtn:hover {
+    color: blue;
+}
+#newGameBtn:active {
+    color: yellow;
 }
 #gameTable{
     width: 90%;
@@ -27,7 +49,7 @@ body {
     margin: 0 50px;
 }
 #buttonPanel{
-    position: fixed;
+    position: relative;
     bottom: 10px;
     width: 100%;
     display: flex;
@@ -49,7 +71,7 @@ body {
     font-size: larger;
 }
 .player{
-    margin: 20px 0 ;
+    margin: 10px 0 ;
 }
 .disabled{
     color: grey;
