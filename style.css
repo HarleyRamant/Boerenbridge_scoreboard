@@ -1,0 +1,65 @@
+* {
+    margin: O;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100wv;
+}
+.hidden {
+    display: none;
+}
+#gameTable{
+    width: 90%;
+    margin: auto;
+}
+.playerTitle{
+    border-bottom: black 1px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.playerBet{
+    float: right;
+}
+.label{
+    font-size: 2rem;
+    height: 100%;
+    margin: 0 50px;
+}
+#buttonPanel{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#buttonPanel > button {
+    height: 40px;
+    width: 100px;
+}
+.playerPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.playerPanel > button {
+    width: 50px;
+    font-weight: 800;
+    font-size: larger;
+}
+.player{
+    margin: 20px 0 ;
+}
+.disabled{
+    color: grey;
+    
+}
+.active{
+    font-weight: 800;
+}
+#menu{
+    height:60px;
+    width: 100%;
+    background-color: lightgray;
+}
